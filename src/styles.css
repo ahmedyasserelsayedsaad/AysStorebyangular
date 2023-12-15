@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --primary-color:#000000c5;
+    --secand-color:rgb(5, 185, 170);
+    --th-color:rgba(68, 67, 67, 0.637);
+    --fourth-color:#fff;
+    --fith-color:#8d8d8d;
+}

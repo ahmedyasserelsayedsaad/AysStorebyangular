@@ -1,0 +1,26 @@
+.nav{
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px var(--th-color);
+}
+.logo a{
+    font-size: 24px;
+    color: var(--secand-color);
+    font-weight: 700;
+}
+.links{
+    padding-top: 5px;
+    padding-right: 10px;
+    
+}
+.links a{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: cursive;
+    color: var(--secand-color);
+    font-weight: 700;
+}

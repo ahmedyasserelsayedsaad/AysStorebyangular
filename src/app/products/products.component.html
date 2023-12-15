@@ -1,0 +1,24 @@
+<div @fadeIn class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 [ngClass]="head"> <span> our </span>products </h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <label for="" [ngClass]="lab">categories-filter:</label>
+                <br>
+                <select #sel style="width: 200px;margin-top: 30px; color: var(--secand-color); font-family: cursive; font-weight: bolder;"  (change)="filterCat($event)">
+                    <option [ngClass]="ope" value="All">All</option>
+                    <option [ngClass]="ope" value="{{op}}" *ngFor="let op of categories">{{op}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 al" *ngFor="let item of d" >
+                <app-products-card [data]="item" (item)="addtoCart($event)"></app-products-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+

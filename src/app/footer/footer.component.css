@@ -1,0 +1,31 @@
+.container{
+    background: var(--primary-color);
+    margin-top: 70px;
+    border-radius: 12px;
+}
+
+.head{
+    color: var(--secand-color);
+    font-size: 23px;
+    font-weight: bolder;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+a{
+    color: var(--fourth-color);
+    text-decoration: none;
+   line-height: 30px;
+   transition: all 0.4s ease;
+}
+a:hover{
+    padding-left: 20px;
+    color: var(--secand-color);
+}
+
+p{
+    color: var(--fourth-color);
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 20px;
+    font-family: cursive;
+}

@@ -1,0 +1,11 @@
+<div [ngClass]="card" style="width: 16rem;"  >
+    <img src="{{data.thumbnail}}" class="card-img-top" alt="...">
+    <div [ngClass]="body">
+      <h5 [ngClass]="h5">{{data.title}}</h5>
+    <div class="info">
+        <p [ngClass]="p">{{data.price|currency}}</p>
+        <p [ngClass]="p" (click)="add()"><i class="fa-solid fa-cart-shopping"></i></p>
+       
+    </div>
+    <button [ngClass]="button"><a href="/prodetails/{{data.id}}">show more <i class="fa-solid fa-arrow-right"></i></a></button>
+  </div>

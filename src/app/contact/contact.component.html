@@ -1,0 +1,46 @@
+<div @fadeIn class="container">
+    <div class="row mt-5">
+        <div class="col-lg-12 mt-5 text-center">
+            <h1 [ngClass]="head">contact <span>us</span></h1>
+        </div>
+    </div>
+    <div class="row ms-auto">
+        <div class="col-lg-6 mt-5 pt-5 text-center">
+            <h2 [ngClass]="title">do you want to contact with us ..?</h2>
+            <p [ngClass]="ptitle">login first to see your message ..!</p>
+            <button [ngClass]="button"><a routerLink="/login">login <i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="col-lg-6">
+            <img [src]="cimg" alt="" srcset="" style="width: 540px;">
+        </div>
+    </div>
+    <div class="row mt-5">
+        
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <form #c="ngForm" (ngSubmit)="add(c)">
+                <div class="mb-3">
+                    <label [ngClass]="lab"  for="exampleFormControlInput1" class="form-label">UserName</label>
+                    <input type="text" #usere name="user" #user="ngModel"  class="form-control"  placeholder="ahmedyasser" ngModel required minlength="10" >
+                    <div class="alert alert-danger" *ngIf="user.errors?.required && user.touched">UserName is required</div>
+                    <div class="alert alert-danger" *ngIf="user.errors?.minlength && user.touched">UserName is must be 10 letters</div>
+                </div>
+                <div class="mb-3">
+                    <label [ngClass]="lab" for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" #useere class="form-control" name="email" #email="ngModel" placeholder="email@.com" required ngModel minlength="10">
+                    <div class="alert alert-danger" *ngIf="email.errors?.required && email.touched">email is required</div>
+                    <div class="alert alert-danger" *ngIf="email.errors?.minlength && email.touched">email must be 10 letters at least</div>
+                </div>
+                <div class="mb-3">
+                    <label [ngClass]="lab" for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea #useeere class="form-control"  rows="3" ></textarea>
+                  </div>
+                  <button type="submit" [disabled]="c.invalid" [ngClass]="button"><a>send <i class="fa-brands fa-telegram"></i></a></button>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center mt-3 pt-4">
+            <h1 [ngClass]="title">ays store</h1>
+            <h3 [ngClass]="pptitle">our team will see your message</h3>
+            <h3 [ngClass]="pptitle">always trust in our team members</h3>
+        </div>
+    </div>
+</div>

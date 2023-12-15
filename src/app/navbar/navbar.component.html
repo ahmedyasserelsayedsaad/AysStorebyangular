@@ -1,0 +1,29 @@
+<!-- Navbar -->
+
+<div class="w3-top">
+    <div class="container">
+        <div [ngClass]="nav">
+            <div [ngClass]="logo">
+                <a routerLink="/" class="w3-bar-item w3-button w3-padding-large">AYS STORE</a>
+            </div>
+            <div class="links" *ngFor="let item of links" >
+                <a routerLink="{{item.path}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">{{item.name}}</a>
+            </div>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+            href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu" style="font-size: 17px;margin-right: 10px;"><i
+                class="fa fa-bars"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+
+
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a routerLink="" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">home</a>
+    <a routerLink="/about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">about</a>
+    <a routerLink="/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    <a routerLink="/products" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">products</a>
+    <a routerLink="/cart" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Cart</a>
+</div>

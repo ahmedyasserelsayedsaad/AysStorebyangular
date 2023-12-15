@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 ps-4">
+            <h3 [ngClass]="head">ays store</h3>
+            <p>we are onLine store ..,
+                you can find all things that you want 
+                login or register to hunt the different products 
+                and put it in your cart ...
+            </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h3 [ngClass]="head">qiuck links</h3>
+            <div class="links" *ngFor="let item of links">
+                <a routerLink="{{item.path}}"> <i class="fa-solid fa-arrow-right"></i> {{item.name}}</a>
+             </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h3 [ngClass]="head">find us</h3>
+            <a routerLink="/" > <i class="fa-solid fa-mobile"></i> 01014567381</a>
+            <br>
+            <a routerLink="/"> <i class="fa-solid fa-phone"></i> 0503011177</a>
+            <br>
+            <a routerLink="/"> <i class="fa-solid fa-location-dot"></i> Egypt , mansoura</a>
+           
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h3 [ngClass]="head">payment</h3>
+            <div class="apps">
+                <img [src]="f1" alt="" srcset="" style="padding-bottom: 10px;width: 160px;">
+                <img [src]="f2" alt="" srcset="" style="padding-bottom: 10px;width: 160px;">
+            </div>
+            <h4 style="color: var(--secand-color); font-size: 22px;">secure payments</h4>
+            <img [src]="f3" alt="" srcset="">
+        </div>
+       
+    </div>
+</div>
